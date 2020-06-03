@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import { SuspenseLoader } from 'Utilities';
 import { HomeRoute } from 'Config/routes';
-import World from 'Comps/World';
-// const World = lazy(() => import('Comps/World'));
+
+const World = lazy(() => import('Comps/World'));
 
 
 const App = () => {
@@ -12,7 +12,7 @@ const App = () => {
         <Router>
             <Switch>
                 <Suspense fallback={<SuspenseLoader />}>
-                    <World />
+                    <Route path={HomeRoute} component={World} />
                 </Suspense>
             </Switch>
         </Router>

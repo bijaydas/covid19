@@ -1,5 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { GoogleMap, withScriptjs, withGoogleMap } from 'react-google-maps';
+7
+import { googleMapUrl } from 'System/url';
 
 class World extends Component {
     constructor(props) {
@@ -30,10 +32,10 @@ const MapWrapper = withScriptjs(
 export default () => {
     return (
         <MapWrapper
-            googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOGj9poeWxLe6tCud31Uy5a4jO7mBJs5s&v=3.exp&libraries=geometry,drawing,places"
-            loadingElement={<div style={{ height: `100%` }} />}
-            containerElement={<div style={{ height: `400px` }} />}
-            mapElement={<div style={{ height: `100%` }} />}
+            googleMapURL={googleMapUrl()}
+            loadingElement={<div />}
+            containerElement={<div />}
+            mapElement={<div style={{height: '100vh'}} />}
         >
         </MapWrapper>
     )
