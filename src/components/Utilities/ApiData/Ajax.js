@@ -1,6 +1,6 @@
 class Ajax {
-    constructor(ApiUrl) {
-        this.ApiUrl = ApiUrl;
+    getData(url) {
+        return fetch(url).then(_ => _.json());
     }
 }
 

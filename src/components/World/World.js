@@ -2,10 +2,7 @@ import React, { Component } from 'react';
 import { GoogleMap, withScriptjs, withGoogleMap } from 'react-google-maps';
 
 import { googleMapUrl } from 'System/url';
-// import { Covid19Ajax } from 'Utilities/ApiData';
-
-// const Covid19AjaxObject = new Covid19Ajax();
-// Covid19AjaxObject.getCountries();
+import { Covid19Ajax } from 'Utilities/ApiData';
 
 class World extends Component {
     constructor(props) {
@@ -18,6 +15,9 @@ class World extends Component {
                 country: 'India',
             },
         };
+    }
+    componentDidMount() {
+        const covid19AjaxObject = new Covid19Ajax();
     }
     render() {
         return (

@@ -18,5 +18,6 @@ export function covid19ApiUrl() {
     const BASE_URL = 'https://api.covid19api.com/';
     return {
         base: BASE_URL,
+        countries: BASE_URL + 'countries'
     };
 }
