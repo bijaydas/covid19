@@ -26,6 +26,12 @@ module.exports = {
         'object-curly-spacing': [2, 'always'],
         'require-jsdoc': 0,
         'react/display-name': 0,
+        'max-len': ['error', {
+            'code': 86,
+            'ignoreComments': true,
+            'ignoreTrailingComments': true,
+            'ignoreUrls': true,
+        }],
     },
     'settings': {
         'react': {
