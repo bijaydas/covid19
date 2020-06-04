@@ -1,39 +1,37 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { GoogleMap, withScriptjs, withGoogleMap } from 'react-google-maps';
 
-
 import { googleMapUrl } from 'System/url';
+// import { Covid19Ajax } from 'Utilities/ApiData';
+
+// const Covid19AjaxObject = new Covid19Ajax();
+// Covid19AjaxObject.getCountries();
 
 class World extends Component {
     constructor(props) {
         super(props);
         this.state = {
             defaultZoom: 2,
-            
-            // Credit: www.latlong.net
             defaultCenter: {
                 lat: 28.613939,
                 lng: 77.209023,
-                country: 'India'
-            }
-        }
+                country: 'India',
+            },
+        };
     }
-
-    
     render() {
-        return(
+        return (
             <GoogleMap
                 defaultZoom={this.state.defaultZoom}
                 center={this.state.defaultCenter}
             >
-                
             </GoogleMap>
-        )
+        );
     };
 }
 
 const MapWrapper = withScriptjs(
-    withGoogleMap(World)
+    withGoogleMap(World),
 );
 
 export default () => {
@@ -42,8 +40,8 @@ export default () => {
             googleMapURL={googleMapUrl()}
             loadingElement={<div />}
             containerElement={<div />}
-            mapElement={<div style={{height: '100vh'}} />}
+            mapElement={<div style={{ height: '100vh' }} />}
         >
         </MapWrapper>
-    )
-}
+    );
+};

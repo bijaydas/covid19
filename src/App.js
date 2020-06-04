@@ -6,9 +6,8 @@ import { HomeRoute } from 'Config/routes';
 
 const World = lazy(() => import('Comps/World'));
 
-
 const App = () => {
-    return(
+    return (
         <Router>
             <Switch>
                 <Suspense fallback={<SuspenseLoader />}>
@@ -16,7 +15,7 @@ const App = () => {
                 </Suspense>
             </Switch>
         </Router>
-    )
-}
+    );
+};
 
 export default App;

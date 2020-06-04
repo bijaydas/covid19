@@ -5,23 +5,25 @@ const common = {
             {
                 test: /\.(js)$/,
                 exclude: /node_modules/,
-                use: 'babel-loader'
+                use: 'babel-loader',
             },
             {
                 test: /\.(png|jpg|jpeg|svg)/,
-                use: 'file-loader'
-            }
-        ]
+                use: 'file-loader',
+            },
+        ],
     },
     resolve: {
         alias: {
             Utilities: path.resolve(__dirname, '../src/components/Utilities/'),
-            ErrorBoundary: path.resolve(__dirname, '../src/components/ErrorBoundary/'),
+            ErrorBoundary: path.resolve(
+                __dirname, '../src/components/ErrorBoundary/',
+            ),
             Comps: path.resolve(__dirname, '../src/components/'),
             Config: path.resolve(__dirname, '../config/'),
-            System: path.resolve(__dirname, '../src/system/')
-        }
-    }
-}
+            System: path.resolve(__dirname, '../src/system/'),
+        },
+    },
+};
 
 module.exports = common;

@@ -7,6 +7,7 @@
         "start": "",
         "build": "",
         "test": "",
+        "eslint": "eslint .",
         "dev": "webpack-dev-server --config ./config/development.webpack.js --hot"
     },
     "keywords": [],

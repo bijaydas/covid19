@@ -1,5 +1,5 @@
 const routes = {
-    HomeRoute: '/'
+    HomeRoute: '/',
 };
 
 module.exports = routes;
