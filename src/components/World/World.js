@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { GoogleMap, withScriptjs, withGoogleMap } from 'react-google-maps';
-
-import { googleMapUrl } from 'System/url';
-import { Covid19Ajax } from 'Utilities/ApiData';
+import { Urls } from 'Utilities';
 
 class World extends Component {
     constructor(props) {
@@ -17,7 +15,7 @@ class World extends Component {
         };
     }
     componentDidMount() {
-        const covid19AjaxObject = new Covid19Ajax();
+        
     }
     render() {
         return (
@@ -35,9 +33,11 @@ const MapWrapper = withScriptjs(
 );
 
 export default () => {
+    const url = new Urls();
+    
     return (
         <MapWrapper
-            googleMapURL={googleMapUrl()}
+            googleMapURL={url.googleMapUrl()}
             loadingElement={<div />}
             containerElement={<div />}
             mapElement={<div style={{ height: '100vh' }} />}

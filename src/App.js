@@ -1,17 +1,18 @@
 import React, { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import { SuspenseLoader } from 'Utilities';
+import SuspenseLoader from 'Comps/SuspenseLoader/SuspenseLoader';
 import { HomeRoute } from 'Config/routes';
 
 const World = lazy(() => import('Comps/World'));
+const Home = lazy(() => import('Comps/Home'));
 
 const App = () => {
     return (
         <Router>
             <Switch>
                 <Suspense fallback={<SuspenseLoader />}>
-                    <Route path={HomeRoute} component={World} />
+                    <Route exact path={HomeRoute} component={Home} />
                 </Suspense>
             </Switch>
         </Router>
