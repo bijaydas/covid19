@@ -3,7 +3,6 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Redirect
 } from 'react-router-dom';
 
 import SuspenseLoader from 'Comps/SuspenseLoader/SuspenseLoader';
@@ -34,9 +33,14 @@ const App = () => {
                     {pages.map((page, index) => {
                         return (
                             <Route
+                                exact
                                 key={index}
                                 path={page.pageLink}
-                                component={page.view}
+                                render={(props) => {
+                                    let activeTab = props.location.pathname;
+                                    activeTab = activeTab.replace(/\//, '');
+                                    return <page.view activeTab={activeTab} />
+                                }}
                             />
                         );
                     })}

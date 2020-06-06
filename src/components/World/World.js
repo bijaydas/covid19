@@ -1,45 +1,15 @@
-import React, { Component } from 'react';
-import { GoogleMap, withScriptjs, withGoogleMap } from 'react-google-maps';
-import { Urls } from 'Utilities';
+import React from 'react';
 
-class World extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            defaultZoom: 2,
-            defaultCenter: {
-                lat: 28.613939,
-                lng: 77.209023,
-                country: 'India',
-            },
-        };
-    }
-    componentDidMount() {
-    }
-    render() {
-        return (
-            <GoogleMap
-                defaultZoom={this.state.defaultZoom}
-                center={this.state.defaultCenter}
-            >
-            </GoogleMap>
-        );
-    };
+import { Header } from 'Comps/Header';
+import Map from './Map';
+
+const World = props => {
+    return(
+        <div className="full-height grid grid-1-12">
+            <Header activeTab={props.activeTab} />
+            <Map />
+        </div>
+    )
 }
 
-const MapWrapper = withScriptjs(
-    withGoogleMap(World),
-);
-
-export default () => {
-    const url = new Urls();
-    return (
-        <MapWrapper
-            googleMapURL={url.googleMapUrl()}
-            loadingElement={<div />}
-            containerElement={<div />}
-            mapElement={<div style={{ height: '100vh' }} />}
-        >
-        </MapWrapper>
-    );
-};
+export default World;

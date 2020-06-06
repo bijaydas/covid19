@@ -1,12 +1,14 @@
 import React from 'react';
 import { getCountries } from 'Utilities';
 
-const Home = () => {
-    const countries = getCountries();
-    console.log(countries);
+import { Header } from 'Comps/Header';
+import Content from './Content';
+
+const Home = props => {
     return (
-        <div className="Home">
-            Home Functional Component
+        <div className="full-height grid grid-1-12">
+            <Header activeTab={props.activeTab} />
+            <Content />
         </div>
     );
 };
