@@ -23,6 +23,7 @@ const common = {
             Comps: path.resolve(__dirname, '../src/components/'),
             Config: path.resolve(__dirname, '../config/'),
             Utilities: path.resolve(__dirname, '../src/utilities/'),
+            Css: path.resolve(__dirname, '../public/css/'),
         },
     },
     plugins: [
