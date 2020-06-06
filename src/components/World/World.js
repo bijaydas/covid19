@@ -15,7 +15,6 @@ class World extends Component {
         };
     }
     componentDidMount() {
-        
     }
     render() {
         return (
@@ -34,7 +33,6 @@ const MapWrapper = withScriptjs(
 
 export default () => {
     const url = new Urls();
-    
     return (
         <MapWrapper
             googleMapURL={url.googleMapUrl()}

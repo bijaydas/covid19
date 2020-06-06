@@ -16,14 +16,17 @@ const common = {
     },
     resolve: {
         alias: {
-            ErrorBoundary: path.resolve(__dirname, '../src/components/ErrorBoundary/'),
+            ErrorBoundary: path.resolve(
+                __dirname,
+                '../src/components/ErrorBoundary/',
+            ),
             Comps: path.resolve(__dirname, '../src/components/'),
             Config: path.resolve(__dirname, '../config/'),
             Utilities: path.resolve(__dirname, '../src/utilities/'),
         },
     },
     plugins: [
-        new Dotenv()
+        new Dotenv(),
     ],
 };
 
