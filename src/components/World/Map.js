@@ -23,7 +23,6 @@ class World extends Component {
                 defaultZoom={this.state.defaultZoom}
                 center={this.state.defaultCenter}
             >
-            
             </GoogleMap>
         );
     };
@@ -34,15 +33,11 @@ const MapWrapper = withScriptjs(
 );
 
 const containerElement = (
-    <div className="containerElement" style={{padding: '2rem'}}>
-        
-    </div>
+    <div className="containerElement" style={{ padding: '2rem' }}></div>
 );
 
 const mapElement = (
-    <div className="mapElement" style={{height: '60%'}}>
-        
-    </div>
+    <div className="mapElement" style={{ height: '60%' }}></div>
 );
 
 const loadingElement = (

@@ -1,4 +1,5 @@
 import React, { lazy, Suspense } from 'react';
+import PropTypes from 'prop-types';
 import {
     BrowserRouter as Router,
     Switch,
@@ -15,14 +16,14 @@ const pages = [
         pageLink: '/',
         view: Home,
         displayName: 'Home',
-        showInNavbar: true
+        showInNavbar: true,
     },
     {
         pageLink: '/world',
         view: World,
         displayName: 'World',
-        showInNavbar: true
-    }
+        showInNavbar: true,
+    },
 ];
 
 const App = () => {
@@ -39,7 +40,7 @@ const App = () => {
                                 render={(props) => {
                                     let activeTab = props.location.pathname;
                                     activeTab = activeTab.replace(/\//, '');
-                                    return <page.view activeTab={activeTab} />
+                                    return <page.view activeTab={activeTab} />;
                                 }}
                             />
                         );
@@ -48,6 +49,10 @@ const App = () => {
             </Switch>
         </Router>
     );
+};
+
+App.propTypes = {
+    location: PropTypes.string.isRequired,
 };
 
 export default App;
