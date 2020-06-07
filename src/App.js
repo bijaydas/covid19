@@ -51,6 +51,10 @@ const App = () => {
     );
 };
 
+App.defaultProps = {
+    location: '',
+};
+
 App.propTypes = {
     location: PropTypes.string.isRequired,
 };
