@@ -2,5 +2,5 @@
     display: grid;
 }
 .grid-1-12 {
-    grid-template-columns: 1fr 12fr;
+    grid-template-columns: 1fr 14fr;
 }
