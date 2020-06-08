@@ -1,11 +1,14 @@
-import useSWR from 'swr';
 import { Urls } from 'Utilities';
 import { fetcher } from './common';
 
-const getCountries = () => {
+const getCountries = (callback = null) => {
     const urls = new Urls();
-    const { data } = useSWR(urls.countries(), fetcher);
-    return data;
+    fetcher(urls.countries())
+        .then((data) => {
+            callback(null, data);
+        }).catch((err) => {
+            callback(err, null);
+        });
 };
 
 export {

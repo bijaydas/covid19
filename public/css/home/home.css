@@ -1,0 +1,20 @@
+.Content .target span {
+    text-transform: uppercase;
+    margin: 0 .20rem;
+    font-weight: bold;
+    letter-spacing: .1rem;
+}
+.Content .target .live {
+    color: #c0392b;
+}
+.Content .target .live svg {
+    opacity: 1;
+    animation: fadeInOutLiveIcon 2s infinite;
+}
+@keyframes fadeInOutLiveIcon {
+    0%, 100% {opacity: 0.1}
+    50% {opacity: 1}
+}
+.Content .stats-card {
+    margin-top: .80rem;
+}
