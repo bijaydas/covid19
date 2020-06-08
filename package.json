@@ -1,16 +1,16 @@
 {
-    "name": "wp",
+    "name": "covid19",
     "version": "1.0.0",
-    "description": "",
+    "description": "Covid19 tracker with world data",
     "main": "index.js",
     "scripts": {
         "start": "",
         "build": "",
         "test": "",
-        "eslint": "eslint .",
+        "lint": "eslint .",
         "dev": "webpack-dev-server --config ./config/development.webpack.js --hot"
     },
-    "keywords": [],
+    "keywords": ["covid19 tracker", "react", "World covid 19 tracker", "India covid 19 tracker"],
     "author": "",
     "license": "ISC",
     "dependencies": {
