@@ -17,7 +17,7 @@ class Content extends Component {
                 confirmed: 0,
                 recovered: 0,
                 deaths: 0,
-            }
+            },
         };
         this.countryUpdate = this.countryUpdate.bind(this);
     }
@@ -42,7 +42,7 @@ class Content extends Component {
         worldTotal((err, data) => {
             const confirmed = formatNumber(data.TotalConfirmed);
             const recovered = formatNumber(data.TotalRecovered);
-            const deaths    = formatNumber(data.TotalDeaths);
+            const deaths = formatNumber(data.TotalDeaths);
             this.setState((state) => {
                 return {
                     ...state,
