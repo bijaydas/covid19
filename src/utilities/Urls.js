@@ -15,6 +15,9 @@ class Urls {
     countries() {
         return this.baseUrl + 'countries';
     }
+    worldTotal() {
+        return this.baseUrl + 'world/total';
+    }
     summary() {
         return this.baseUrl + 'summary';
     }

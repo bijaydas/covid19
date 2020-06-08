@@ -1,7 +1,10 @@
 import Urls from './Urls';
-import { getCountries } from './ajax/covid19';
+import { getCountries, worldTotal } from './ajax/covid19';
+import { formatNumber } from './common';
 
 export {
     Urls,
     getCountries,
+    worldTotal,
+    formatNumber,
 };
