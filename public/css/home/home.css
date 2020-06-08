@@ -1,20 +1,61 @@
-.Content .target span {
-    text-transform: uppercase;
-    margin: 0 .20rem;
+.stat-card {
+    text-align: center;
+    border: 1px solid transparent;
+    border-radius: .2rem;
     font-weight: bold;
-    letter-spacing: .1rem;
 }
-.Content .target .live {
+
+.stat-card .body {
+    font-size: 1.60rem;
+    padding: .85rem 0rem;
+    border-radius: .2rem .2rem 0 0;
+}
+.stat-card .footer {
+    padding: .4rem 0rem;
+    border-radius: 0 0 .2rem .2rem;
+}
+
+/* Card specific */
+.stat-card .control .body {
+    font-size: 1rem;
+    text-align: left;
     color: #c0392b;
+    text-transform: uppercase;
 }
-.Content .target .live svg {
+.stat-card .control .body svg {
     opacity: 1;
     animation: fadeInOutLiveIcon 2s infinite;
+}
+.stat-card .control .body span {
+    margin: 0 .20rem;
+    letter-spacing: .2rem;
 }
 @keyframes fadeInOutLiveIcon {
     0%, 100% {opacity: 0.1}
     50% {opacity: 1}
 }
-.Content .stats-card {
-    margin-top: .80rem;
+
+
+.stat-card.card-confirmed {
+    color: #e53e3e;
+    background-color: #fff5f5;
+}
+.stat-card.card-confirmed .footer {
+    background-color: #fed7d7;
+}
+
+.stat-card.card-recovered {
+    color: #38a169;
+    background-color: #f0fff4;
+}
+.stat-card.card-recovered .footer {
+    background-color: #c6f6d5;
+}
+
+.stat-card.card-deaths {
+    color: #718096;
+    background-color: #edf2f7;
+}
+.stat-card.card-deaths .footer {
+    background-color: #e2e8f0;
 }
