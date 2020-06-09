@@ -34,7 +34,5 @@ class CovidAjax extends Urls {
                 callback(error, null);
             });
     }
-    
 }
-
 module.exports = CovidAjax;

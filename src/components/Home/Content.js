@@ -8,7 +8,7 @@ import {
 import 'Css/home/home.css';
 import {
     formatNumber,
-    CovidAjax
+    CovidAjax,
 } from 'Utilities';
 
 class Content extends Component {
@@ -29,7 +29,6 @@ class Content extends Component {
          * Setting the country list in the dropdown
          */
         const ajax = new CovidAjax();
-        
         ajax.getCountries((err, data) => {
             const countries = data.map((country) => {
                 return {
@@ -44,7 +43,6 @@ class Content extends Component {
         /**
          * Selecting the world total
          */
-        
         ajax.getWorldTotal((err, data) => {
             const confirmed = formatNumber(data.TotalConfirmed);
             const recovered = formatNumber(data.TotalRecovered);
