@@ -6,7 +6,10 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 import 'Css/home/home.css';
-import { getCountries, worldTotal, formatNumber } from 'Utilities';
+import {
+    formatNumber,
+    CovidAjax
+} from 'Utilities';
 
 class Content extends Component {
     constructor(props) {
@@ -25,7 +28,9 @@ class Content extends Component {
         /**
          * Setting the country list in the dropdown
          */
-        getCountries((err, data) => {
+        const ajax = new CovidAjax();
+        
+        ajax.getCountries((err, data) => {
             const countries = data.map((country) => {
                 return {
                     label: country.Country,
@@ -39,7 +44,8 @@ class Content extends Component {
         /**
          * Selecting the world total
          */
-        worldTotal((err, data) => {
+        
+        ajax.getWorldTotal((err, data) => {
             const confirmed = formatNumber(data.TotalConfirmed);
             const recovered = formatNumber(data.TotalRecovered);
             const deaths = formatNumber(data.TotalDeaths);
@@ -55,7 +61,8 @@ class Content extends Component {
             });
         });
     }
-    countryUpdate(data) {
+    countryUpdate({ value }) {
+        console.log(value);
     }
     render() {
         const customStyles = {
@@ -68,7 +75,7 @@ class Content extends Component {
             },
         };
         return (
-            <main className="Content content-padding">
+            <main className="Content content-padding grid grid-1-1">
                 <section className="left">
                     <h3>Global status</h3>
                     <div className="grid grid-equal-4">
