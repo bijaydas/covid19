@@ -2,7 +2,7 @@
     "name": "covid19",
     "version": "1.0.0",
     "description": "Covid19 tracker with world data",
-    "main": "index.js",
+    "main": "dist/index.js",
     "scripts": {
         "start": "",
         "build": "",
@@ -10,8 +10,9 @@
         "lint": "eslint .",
         "dev": "webpack-dev-server --config ./config/development.webpack.js --hot"
     },
+    "repository": "https://github.com/bijaydas/covid19",
     "keywords": ["covid19 tracker", "react", "World covid 19 tracker", "India covid 19 tracker"],
-    "author": "",
+    "author": "Bijay Das <imbijaydas@gmail.com>",
     "license": "ISC",
     "dependencies": {
         "@fortawesome/fontawesome-svg-core": "^1.2.28",
