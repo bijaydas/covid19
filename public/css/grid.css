@@ -1,6 +1,9 @@
 .grid {
     display: grid;
 }
+.grid-1-1 {
+    grid-template-columns: 2fr 1fr;
+}
 .grid-1-12 {
     grid-template-columns: 1fr 14fr;
 }
