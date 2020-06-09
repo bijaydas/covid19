@@ -27,6 +27,9 @@ class Urls {
     dayOneAllStatus(country = null) {
         return `${this.baseUrl}/dayone/country/${country}`;
     }
+    countryTotalAllStatus(country = null) {
+        return `${this.baseUrl}/total/country/${country}`;
+    }
 }
 
-export default Urls;
+module.exports = Urls;

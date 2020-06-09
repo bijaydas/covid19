@@ -62,7 +62,22 @@ class Content extends Component {
         });
     }
     countryUpdate({ value }) {
-        console.log(value);
+        const ajax = new CovidAjax();
+        ajax.getCountryTotalAllStatus(value, (err, data) => {
+            if (data.length > 0) {
+                const latest = data[data.length - 1];
+                this.setState((state) => {
+                    return {
+                        ...state,
+                        total: {
+                            confirmed: formatNumber(latest.Confirmed),
+                            recovered: formatNumber(latest.Recovered),
+                            deaths: formatNumber(latest.Deaths),
+                        },
+                    };
+                });
+            }
+        });
     }
     render() {
         const customStyles = {
