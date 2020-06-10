@@ -1,3 +1,8 @@
+/* Adding space between .left and .right */
+.Content section {
+    margin: 0 10px;
+}
+
 .stat-card {
     text-align: center;
     border: 1px solid transparent;
@@ -67,4 +72,28 @@
     padding: 1rem 0;
     color: #718096;
     font-weight: bold;
+}
+
+.right p {
+    color: #827B7B;
+    font-size: .90rem;
+    border-left: 4px solid #827B7B;
+    padding: 0 .20rem;
+    margin: .20rem .20rem;
+}
+.Content .right table {
+    margin: 1rem auto;
+    border: 1px solid #E9E9E9;
+    padding: .20rem;
+    border-collapse: collapse;
+}
+.Content .right table th {
+    font-size: .80rem;
+    border: 1px solid #E9E9E9;
+    padding: .35rem;
+}
+
+.Content .right table td {
+    border: 1px solid #E9E9E9;
+    padding: .35rem;
 }
