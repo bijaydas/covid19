@@ -14,6 +14,16 @@ class CovidAjax extends Urls {
                 callback(error, null);
             });
     }
+    getSummary(callback = null) {
+        fetch(this.summary())
+            .then((res) => res.json())
+            .then((res) => {
+                callback(null, res);
+            })
+            .catch((error) => {
+                callback(error, null);
+            });
+    }
     getWorldTotal(callback = null) {
         fetch(this.worldTotal())
             .then((res) => res.json())
