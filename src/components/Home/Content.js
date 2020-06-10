@@ -4,6 +4,7 @@ import Select from 'react-select';
 import {
     faDotCircle,
 } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 import 'Css/home/home.css';
 import {
@@ -120,6 +121,10 @@ class Content extends Component {
                             <div className="body">{this.state.total.deaths}</div>
                             <div className="footer">Deaths</div>
                         </div>
+                    </div>
+                    
+                    <div className="more-info">
+                        <Link to="/anylytics">More info</Link>
                     </div>
                 </section>
                 <section className="right"></section>

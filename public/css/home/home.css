@@ -59,3 +59,12 @@
 .stat-card.card-deaths .footer {
     background-color: #e2e8f0;
 }
+
+.more-info a {
+    text-decoration: none;
+    display: block;
+    text-align: right;
+    padding: 1rem 0;
+    color: #718096;
+    font-weight: bold;
+}
