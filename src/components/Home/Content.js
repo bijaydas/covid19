@@ -9,6 +9,5 @@ const Content = () => {
             <ContentRight />
         </main>
     );
-}
-
+};
 export default Content;
