@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-    faDotCircle,
-    faExclamationCircle
+    faExclamationCircle,
 } from '@fortawesome/free-solid-svg-icons';
 
 import {
@@ -21,7 +20,6 @@ class ContentRight extends Component {
         /**
          * Setting the country list in the dropdown
          */
-        
         const ajax = new CovidAjax();
         ajax.getSummary((err, countries) => {
             this.setState({
@@ -32,16 +30,17 @@ class ContentRight extends Component {
     render() {
         let countryStats = null;
         if (this.state.countries.length > 0) {
-            countryStats = this.state.countries.splice(0, 10).map((country, index) => {
-                return (
-                    <tr key={index}>
-                        <td>{country.Country}</td>
-                        <td>{formatNumber( country.TotalConfirmed )}</td>
-                        <td>{formatNumber( country.TotalRecovered )}</td>
-                        <td>{formatNumber( country.TotalDeaths )}</td>
-                    </tr>
-                );
-            });
+            countryStats = this.state.countries.splice(0, 10)
+                .map((country, index) => {
+                    return (
+                        <tr key={index}>
+                            <td>{country.Country}</td>
+                            <td>{formatNumber( country.TotalConfirmed )}</td>
+                            <td>{formatNumber( country.TotalRecovered )}</td>
+                            <td>{formatNumber( country.TotalDeaths )}</td>
+                        </tr>
+                    );
+                });
         }
         return (
             <section className="right">
@@ -62,7 +61,7 @@ class ContentRight extends Component {
                     </thead>
                 </table>
             </section>
-        )
+        );
     };
 }
 
