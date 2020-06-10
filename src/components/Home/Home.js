@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import { getCountries } from 'Utilities';
 
+import 'Css/home/home.css';
 import { Header } from 'Comps/Header';
 import Content from './Content';
 
