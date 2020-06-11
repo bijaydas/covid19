@@ -4,6 +4,8 @@ import {
     faExclamationCircle,
 } from '@fortawesome/free-solid-svg-icons';
 
+import 'flag-icon-css/css/flag-icon.css';
+
 import {
     formatNumber,
     CovidAjax,
@@ -32,9 +34,10 @@ class ContentRight extends Component {
         if (this.state.countries.length > 0) {
             countryStats = this.state.countries.splice(0, 10)
                 .map((country, index) => {
+                    const flagClass = `flag-icon flag-icon-${country.CountryCode.toLowerCase()}`;
                     return (
                         <tr key={index}>
-                            <td>{country.Country}</td>
+                            <td><span className={flagClass}></span> {country.Country}</td>
                             <td>{formatNumber( country.TotalConfirmed )}</td>
                             <td>{formatNumber( country.TotalRecovered )}</td>
                             <td>{formatNumber( country.TotalDeaths )}</td>
