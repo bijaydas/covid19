@@ -112,3 +112,41 @@
 .Content .right table td:nth-child(4) {
     padding: .20rem;
 }
+
+.Content a.full-list {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    color: #718096;
+}
+.Content a.full-list:hover {
+    text-decoration: underline;
+}
+
+.Content .steps-to-prevent {
+    padding: .50rem;
+    border-radius: .40rem;
+    background-color: #ebf8ff;
+    border: 1px solid #A2D6F2;
+    margin-top: 1rem;
+}
+
+.Content .steps-to-prevent .tag-lines p {
+    border: none;
+    font-size: 1.2rem;
+}
+.Content .steps-to-prevent .tag-lines span {
+    color: #0B751C;
+    font-weight: bold;
+}
+.Content .steps-to-prevent a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background-color: #44aaee;
+    border-radius: .50rem;
+    padding: .50rem;
+    font-weight: 300;
+    color: #fff;
+}
