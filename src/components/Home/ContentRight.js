@@ -34,7 +34,8 @@ class ContentRight extends Component {
         if (this.state.countries.length > 0) {
             countryStats = this.state.countries.splice(0, 10)
                 .map((country, index) => {
-                    const flagClass = `flag-icon flag-icon-${country.CountryCode.toLowerCase()}`;
+                    const CountryCode = country.CountryCode.toLowerCase();
+                    const flagClass = `flag-icon flag-icon-${CountryCode}`;
                     return (
                         <tr key={index}>
                             <td>
