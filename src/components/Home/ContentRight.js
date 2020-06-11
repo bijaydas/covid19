@@ -3,9 +3,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faExclamationCircle,
 } from '@fortawesome/free-solid-svg-icons';
-
 import 'flag-icon-css/css/flag-icon.css';
 
+import { Link } from 'react-router-dom';
 import {
     formatNumber,
     CovidAjax,
@@ -37,10 +37,23 @@ class ContentRight extends Component {
                     const flagClass = `flag-icon flag-icon-${country.CountryCode.toLowerCase()}`;
                     return (
                         <tr key={index}>
-                            <td><span className={flagClass}></span> {country.Country}</td>
-                            <td>{formatNumber( country.TotalConfirmed )}</td>
-                            <td>{formatNumber( country.TotalRecovered )}</td>
-                            <td>{formatNumber( country.TotalDeaths )}</td>
+                            <td>
+                                <Link to="/country/">
+                                    <span className={flagClass}></span>
+                                    <span>
+                                        {country.Country}
+                                    </span>
+                                </Link>
+                            </td>
+                            <td>
+                                {formatNumber( country.TotalConfirmed )}
+                            </td>
+                            <td>
+                                {formatNumber( country.TotalRecovered )}
+                            </td>
+                            <td>
+                                {formatNumber( country.TotalDeaths )}
+                            </td>
                         </tr>
                     );
                 });

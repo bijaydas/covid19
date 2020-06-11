@@ -95,5 +95,20 @@
 
 .Content .right table td {
     border: 1px solid #E9E9E9;
-    padding: .35rem;
+    /* padding: .30rem .35rem; */
+}
+.Content .right table td a {
+    text-decoration: none;
+    color: #718096;
+    display: block;
+    padding: .30rem .35rem;
+}
+.Content .right table td a span {
+    margin: 0rem .20rem;
+}
+
+.Content .right table td:nth-child(2),
+.Content .right table td:nth-child(3),
+.Content .right table td:nth-child(4) {
+    padding: .20rem;
 }
