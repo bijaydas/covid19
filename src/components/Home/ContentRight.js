@@ -10,6 +10,7 @@ import {
     formatNumber,
     CovidAjax,
 } from 'Utilities';
+import HospitalImage from 'Assets/hospital.png';
 
 class ContentRight extends Component {
     constructor(props) {
@@ -77,6 +78,23 @@ class ContentRight extends Component {
                         {countryStats}
                     </thead>
                 </table>
+                
+                <Link className="full-list" to="/countries">All country status</Link>
+                
+                <section className="steps-to-prevent">
+                    <div className="icon-with-info grid grid-1-12">
+                        <div className="icon flex flex-center-middle">
+                            <img src={HospitalImage} alt="Hospital icon"/>
+                        </div>
+                        <div className="tag-lines">
+                            <p><span>Steps</span> to prevent Coronavirus</p>
+                            <p>Read and share with others</p>
+                        </div>
+                    </div>
+                    <div className="who-link">
+                        <a href="/">Visit WHO</a>
+                    </div>
+                </section>
             </section>
         );
     };
