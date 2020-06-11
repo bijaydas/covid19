@@ -78,9 +78,7 @@ class ContentRight extends Component {
                         {countryStats}
                     </thead>
                 </table>
-                
                 <Link className="full-list" to="/countries">All country status</Link>
-                
                 <section className="steps-to-prevent">
                     <div className="icon-with-info grid grid-1-12">
                         <div className="icon flex flex-center-middle">
